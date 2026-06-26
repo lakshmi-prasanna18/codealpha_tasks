@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FashionHub</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo-area">
+    <img src="logo.png" alt="FashionHub Logo">
+    <h1>FashionHub</h1>
+</div>
+	<div id="user-info"></div>
+<div id="profile" class="hidden">
+    <h3>My Account</h3>
+    <p id="profile-name"></p>
+    <p id="profile-email"></p>
+</div>
+    <input type="text" id="search" placeholder="Search products...">
+    <button onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+	<button onclick="window.location.href='account.html'">
+👤 Account
+</button>
+</header>
+
+<section class="hero">
+
+<h2>Fashion That Defines You</h2>
+
+<p>
+Discover Premium Kurtis, Sarees,
+Dresses & Accessories
+</p>
+
+<button onclick="toggleProfile()">
+👤 My Account
+</button>
+
+<button>
+Shop Now
+</button>
+
+<button onclick="toggleDarkMode()">
+🌙 Dark Mode
+</button>
+
+<button onclick="logout()">
+Logout
+</button>
+
+</section><section class="categories">
+    <button onclick="filterProducts('All')">All</button>
+    <button onclick="filterProducts('Kurti')">Kurtis</button>
+    <button onclick="filterProducts('Saree')">Sarees</button>
+    <button onclick="filterProducts('Dress')">Dresses</button>
+    <button onclick="filterProducts('Bag')">Bags</button>
+</section>
+
+<section id="products" class="products"></section>
+
+<section class="about">
+<h2>About FashionHub</h2>
+<p>
+FashionHub brings elegant fashion collections,
+including kurtis, sarees, dresses and accessories,
+at affordable prices.
+</p>
+</section>
+
+<section class="contact">
+<h2>Contact Us</h2>
+
+<p>Email: fashionhub@gmail.com</p>
+
+<p>Phone: +91 9876543210</p>
+</section>
+
+<div id="cart" class="cart hidden">
+    <h2>🛍️ My Fashion Bag</h2>
+    <ul id="cart-items"></ul>
+    <h3>Total: ₹<span id="total">0</span></h3>
+</div>
+
+<script src="script.js"></script>
+
+<footer>
+<p>© 2026 FashionHub | Designed by Lakshmi Prasanna</p>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login - FashionHub</title>
+<style>
+body{
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#111827,#ec4899);
+}
+.box{
+background:white;
+padding:30px;
+border-radius:10px;
+width:300px;
+}
+input,button{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+button{
+background:#ec4899;
+color:white;
+border:none;
+cursor:pointer;
+}
+.error{
+color:red;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+<h2>Login</h2>
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p id="error" class="error"></p>
+
+<p>
+New User?
+<a href="register.html">Register</a>
+</p>
+</div>
+
+<script>
+
+function login(){
+
+const savedUser=
+JSON.parse(localStorage.getItem("user"));
+
+const email=
+document.getElementById("email").value;
+
+const password=
+document.getElementById("password").value;
+
+if(
+savedUser &&
+savedUser.email===email &&
+savedUser.password===password
+){
+
+localStorage.setItem(
+"isLoggedIn",
+"true"
+);
+
+window.location.href="index.html";
+
+}
+else{
+
+document.getElementById("error").innerHTML=
+"Invalid Credentials";
+
+}
+
+}
+</script>
+
+</body>
+</html>

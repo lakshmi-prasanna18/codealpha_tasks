@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>FashionHub</h1>
+</header>
+
+<div class="account-page">
+
+    <h2>👤 My Account</h2>
+
+    <div class="account-card">
+
+        <p id="acc-name"></p>
+        <p id="acc-email"></p>
+
+        <button onclick="window.location.href='index.html'">
+            Back To Store
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+const user =
+JSON.parse(localStorage.getItem("user"));
+
+if(user){
+
+document.getElementById("acc-name").innerHTML =
+"<b>Name:</b> " + user.name;
+
+document.getElementById("acc-email").innerHTML =
+"<b>Email:</b> " + user.email;
+
+}
+
+</script>
+
+</body>
+</html>
