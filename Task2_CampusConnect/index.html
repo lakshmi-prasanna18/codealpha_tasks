@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusConnect</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+<h1>🎓 CampusConnect</h1>
+<div>
+
+<span id="userName"></span>
+
+<button onclick="window.location.href='profile.html'">
+👤 Profile
+</button>
+
+<button onclick="toggleDarkMode()">
+🌙 Dark Mode
+</button>
+
+<button onclick="logout()">
+Logout
+</button>
+
+</div>
+
+</header>
+
+<section class="hero">
+<h2>Welcome to CampusConnect 🎓</h2>
+<p>
+Connect with classmates, share ideas,
+internships, notes and opportunities.
+</p>
+</section>
+
+<section class="create-post">
+
+<h2>Create Post</h2>
+
+<select id="category">
+
+<option value="Academics">
+📖 Academics
+</option>
+
+<option value="Internships">
+💼 Internships
+</option>
+
+<option value="Events">
+🎉 Events
+</option>
+
+<option value="Placements">
+🚀 Placements
+</option>
+
+</select>
+<input
+type="file"
+id="mediaFile"
+accept="image/*,video/*">
+
+<textarea
+id="postText"
+placeholder="Share something with your classmates...">
+</textarea>
+
+<button onclick="addPost()">
+Post
+</button>
+
+</section>
+
+<section
+id="postsContainer"
+class="posts">
+</section>
+
+
+<footer>
+    © 2026 CampusConnect | Built by Lakshmi Prasanna
+</footer>
+
+
+<script src="script.js"></script>
+
+
+
+</body>
+</html>

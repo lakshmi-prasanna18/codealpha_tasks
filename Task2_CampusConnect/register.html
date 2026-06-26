@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusConnect - Register</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-body">
+
+<div class="auth-container">
+
+<h1>🎓 CampusConnect</h1>
+<p>Join your college community</p>
+
+<input type="text" id="name" placeholder="Full Name">
+
+<input type="email" id="email" placeholder="College Email">
+
+<div class="password-container">
+    <input
+        type="password"
+        id="password"
+        placeholder="Enter Password">
+
+    <span
+        class="toggle-password"
+        onclick="togglePassword('password', this)">
+        👁
+    </span>
+</div>
+
+<div class="password-container">
+    <input
+        type="password"
+        id="confirmPassword"
+        placeholder="Confirm Password">
+
+    <span
+        class="toggle-password"
+        onclick="togglePassword('confirmPassword', this)">
+        👁
+    </span>
+</div>
+
+
+<button onclick="register()">
+Create Account
+</button>
+
+<p>
+Already have an account?
+<a href="login.html">Login</a>
+</p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
