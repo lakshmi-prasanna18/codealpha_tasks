@@ -4,7 +4,7 @@ CampusConnect is a mini social media platform for students built using HTML, CSS
 
 Live Demo
 
-
+https://lakshmi-prasanna18.github.io/Task2_CampusConnect/
 
 Features
 
